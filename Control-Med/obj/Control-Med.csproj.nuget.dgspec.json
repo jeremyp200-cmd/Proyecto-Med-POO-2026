@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pc\\OneDrive\\Escritorio\\Proyecto Med\\Control-Med\\Control-Med.csproj": {}
+    "C:\\Users\\ENYYYYY\\Desktop\\Proyecto final\\Proyecto-Med-POO-2026\\Control-Med\\Control-Med.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pc\\OneDrive\\Escritorio\\Proyecto Med\\Control-Med\\Control-Med.csproj": {
+    "C:\\Users\\ENYYYYY\\Desktop\\Proyecto final\\Proyecto-Med-POO-2026\\Control-Med\\Control-Med.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pc\\OneDrive\\Escritorio\\Proyecto Med\\Control-Med\\Control-Med.csproj",
+        "projectUniqueName": "C:\\Users\\ENYYYYY\\Desktop\\Proyecto final\\Proyecto-Med-POO-2026\\Control-Med\\Control-Med.csproj",
         "projectName": "Control-Med",
-        "projectPath": "C:\\Users\\pc\\OneDrive\\Escritorio\\Proyecto Med\\Control-Med\\Control-Med.csproj",
-        "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pc\\OneDrive\\Escritorio\\Proyecto Med\\Control-Med\\obj\\",
+        "projectPath": "C:\\Users\\ENYYYYY\\Desktop\\Proyecto final\\Proyecto-Med-POO-2026\\Control-Med\\Control-Med.csproj",
+        "packagesPath": "C:\\Users\\ENYYYYY\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ENYYYYY\\Desktop\\Proyecto final\\Proyecto-Med-POO-2026\\Control-Med\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\ENYYYYY\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
@@ -47,6 +47,16 @@
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[10.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[10.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[10.0.5, )"
             }
           },
           "imports": [
