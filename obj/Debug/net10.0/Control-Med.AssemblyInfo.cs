@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Control-Med")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+326e55814f3b1101ddfe16d56e036b9069117468")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c825fb3e8ba4f71ba778532a6b2e4ac3065d9651")]
 [assembly: System.Reflection.AssemblyProductAttribute("Control-Med")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Control-Med")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
