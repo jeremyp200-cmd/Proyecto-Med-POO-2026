@@ -1,0 +1,42 @@
+@using Control_Med.Models
+@model RegisterViewModel
+
+<select asp-for="Rol" class="form-control">
+    <option value="Doctor">Doctor</option>
+    <option value="Enfermero">Enfermero</option>
+</select>
+
+@if (User.IsInRole("Doctor"))
+{
+    <a asp-action="Create">Agregar</a>
+}
+
+@if (User.IsInRole("Doctor"))
+{
+    <a asp-action="Edit" asp-route-id="Id">Editar</a>
+    <a asp-action="Delete" asp-route-id="Id">Eliminar</a>
+}
+
+<form method="post">
+
+    <div>
+        <label>Correo</label>
+        <input asp-for="Email" />
+    </div>
+
+    <div>
+        <label>Contraseña</label>
+        <input asp-for="Password" type="password" />
+    </div>
+
+    <div>
+        <label>Rol</label>
+        <select asp-for="Rol">
+            <option value="Doctor">Doctor</option>
+            <option value="Enfermero">Enfermero</option>
+        </select>
+    </div>
+
+    <button type="submit">Registrarse</button>
+
+</form>
