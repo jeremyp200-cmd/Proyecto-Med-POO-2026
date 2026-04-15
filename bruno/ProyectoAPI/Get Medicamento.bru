@@ -14,3 +14,15 @@ settings {
   encodeUrl: true
   timeout: 0
 }
+
+docs {
+  Devuelve la lista completa de medicamentos en la base de datos.
+  
+  Permisos: Doctor y Enfermero.
+  
+  Respuestas:
+  
+  200 OK: Lista de objetos (id, nombre, cantidad, tipo).
+  
+  401 Unauthorized: Si el usuario no ha iniciado sesion.
+}

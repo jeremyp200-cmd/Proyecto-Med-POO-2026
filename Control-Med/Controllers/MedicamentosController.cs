@@ -3,7 +3,6 @@ using ProyectoAPI.Models;
 using ProyectoAPI.Data;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.EntityFrameworkCore;
-
 namespace ProyectoAPI.Controllers
 {
     [ApiController]
@@ -51,10 +50,6 @@ namespace ProyectoAPI.Controllers
         public async Task<IActionResult> Delete(int id)
         {
             var m = await _context.Medicamentos.FirstOrDefaultAsync(x => x.Id == id);
-            if (m == null)
-                return NotFound("No encontrado");
-
-            _context.Medicamentos.Remove(m);
             await _context.SaveChangesAsync();
             return Ok("Eliminado correctamente");
         }

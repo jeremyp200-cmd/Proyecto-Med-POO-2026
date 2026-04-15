@@ -12,12 +12,25 @@ post {
 
 body:json {
   {
-    "email": "enfermero@med.com",
-    "password": "User123!"
+    "email": "doctor@med.com",
+    "password": "Admin123!"
   }
 }
 
 settings {
   encodeUrl: true
   timeout: 0
+}
+
+docs {
+  Login mediante Cookies
+  
+  Autentica al usuario y crea una sesión mediante cookies.
+  Nota: Una vez ejecutado, bruno guardara la cookie para las siguientes peticiones. (GET,POST,PUT,DELET)
+  
+  Rectifica credenciales mediante correo y contraseña, credenciales erroneas o que no existan, tirara error
+  
+  200 OK: Sesion iniciada correctamente.
+  
+  401 Unauthorized: Credenciales incorrectas.
 }

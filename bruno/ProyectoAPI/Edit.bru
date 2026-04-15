@@ -5,7 +5,7 @@ meta {
 }
 
 put {
-  url: http://localhost:5186/api/medicamentos/2
+  url: http://localhost:5186/api/medicamentos/1
   body: json
   auth: inherit
 }
@@ -22,4 +22,19 @@ body:json {
 settings {
   encodeUrl: true
   timeout: 0
+}
+
+docs {
+  Actualiza los datos de un medicamento existente mediante su ID.
+  
+  URL:/api/medicamentos/{id}
+  
+  Permisos:Solo Doctor.
+  
+  Respuestas:
+  200 OK: Actualización exitosa.
+  
+  404 Not Found: Si el ID no existe.
+  
+  403 Forbidden: Error de permisos.
 }

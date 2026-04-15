@@ -22,3 +22,14 @@ settings {
   encodeUrl: true
   timeout: 0
 }
+
+docs {
+  Registra un nuevo medicamento en el sistema (Base de Datos).
+  
+  Permisos: Solo Doctor.
+  Respuestas:
+  
+  200 OK: Medicamento creado con exito.
+  
+  403 Forbidden: Si un Enfermero intenta crearlo.
+}

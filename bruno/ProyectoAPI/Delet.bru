@@ -14,3 +14,17 @@ settings {
   encodeUrl: true
   timeout: 0
 }
+
+docs {
+  Elimina permanentemente un medicamento de la base de datos.
+  
+  URL: /api/medicamentos/{id}
+  
+  Permisos: Solo Doctor.
+  
+  Respuestas:
+  
+  200 OK: Mensaje de "Eliminado correctamente".
+  
+  403 Forbidden: Osea No autorizado (No mensaje)
+}

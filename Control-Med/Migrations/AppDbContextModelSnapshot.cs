@@ -209,6 +209,8 @@ namespace Control_Med.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.HasAnnotation("ProductVersion", "10.0.5");
+
             modelBuilder.Entity("ProyectoAPI.Models.Medicamento", b =>
                 {
                     b.Property<int>("Id")
@@ -222,15 +224,24 @@ namespace Control_Med.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Nombre")
+
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Tipo")
+
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Tipo")
+                        .IsRequired()
+                        
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
 
                     b.ToTable("Medicamentos");
                 });
+
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
@@ -282,6 +293,7 @@ namespace Control_Med.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
+
 #pragma warning restore 612, 618
         }
     }
