@@ -14,22 +14,15 @@ namespace ProyectoAPI.Controllers
         {
             _context = context;
         }
-
-        [HttpGet]
-        public IActionResult Get()
-        {
-            return Ok(_context.Medicamentos);
-        }
-
         [Authorize(Roles = "Doctor,Enfermero")]
         public IActionResult Index()
         {
             return View();
         }
-
-        public IActionResult Register()
+        [HttpGet]
+        public IActionResult Get()
         {
-            return View();
+            return Ok(_context.Medicamentos);
         }
 
         [HttpPost]
@@ -38,25 +31,6 @@ namespace ProyectoAPI.Controllers
             _context.Medicamentos.Add(nuevo);
             _context.SaveChanges(); 
             return Ok("Medicamento agregado");
-        }
-
-        [Authorize(Roles = "Doctor")]
-        public IActionResult Create()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        [Authorize(Roles = "Doctor")]
-        public async Task<IActionResult> Create(Medicamento med)
-        {
-        }
-
-
-        [Authorize(Roles = "Doctor")]
-        public IActionResult Edit(int id)
-        {
-            return View();
         }
 
         [HttpDelete("{id}")]
@@ -69,12 +43,6 @@ namespace ProyectoAPI.Controllers
 
             _context.Medicamentos.Remove(m);
             return Ok("Eliminado");
-        }
-
-        [Authorize(Roles = "Doctor")]
-        public IActionResult Delete(int id)
-        {
-            return View();
         }
     }
 }

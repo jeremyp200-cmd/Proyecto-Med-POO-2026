@@ -1,21 +1,4 @@
-@using Control_Med.Models
 @model RegisterViewModel
-
-<select asp-for="Rol" class="form-control">
-    <option value="Doctor">Doctor</option>
-    <option value="Enfermero">Enfermero</option>
-</select>
-
-@if (User.IsInRole("Doctor"))
-{
-    <a asp-action="Create">Agregar</a>
-}
-
-@if (User.IsInRole("Doctor"))
-{
-    <a asp-action="Edit" asp-route-id="Id">Editar</a>
-    <a asp-action="Delete" asp-route-id="Id">Eliminar</a>
-}
 
 <form method="post">
 
