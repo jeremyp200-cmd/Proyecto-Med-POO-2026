@@ -1,0 +1,26 @@
+@using Control_Med.Models
+@model RegisterViewModel
+
+<form method="post">
+
+    <div>
+        <label>Correo</label>
+        <input asp-for="Email" />
+    </div>
+
+    <div>
+        <label>Contraseña</label>
+        <input asp-for="Password" type="password" />
+    </div>
+
+    <div>
+        <label>Rol</label>
+        <select asp-for="Rol">
+            <option value="Doctor">Doctor</option>
+            <option value="Enfermero">Enfermero</option>
+        </select>
+    </div>
+
+    <button type="submit">Registrarse</button>
+
+</form>

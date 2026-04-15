@@ -5,11 +5,20 @@ meta {
 }
 
 post {
-  url: http://localhost:5186
-  body: none
+  url: http://localhost:5186/api/medicamentos
+  body: json
   auth: inherit
+}
+
+body:json {
+  {
+    "nombre": "Ibuprofeno",
+    "cantidad": 20,
+    "tipo": "Normal"
+  }
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }

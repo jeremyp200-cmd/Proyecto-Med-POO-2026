@@ -1,0 +1,25 @@
+meta {
+  name: Edit
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://localhost:5186/api/medicamentos/2
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "id": 2,
+    "nombre": "Ibuprofeno 600mg",
+    "cantidad": 15,
+    "tipo" : "Normal"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
