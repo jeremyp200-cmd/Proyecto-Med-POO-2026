@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using ProyectoAPI.Models;
 using ProyectoAPI.Data;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ProyectoAPI.Controllers
 {
@@ -32,6 +33,11 @@ namespace ProyectoAPI.Controllers
             return View();
         }
 
+        private IActionResult View(Medicamento med)
+        {
+            throw new NotImplementedException();
+        }
+
         [HttpPost]
         public IActionResult Post(Medicamento nuevo)
         {
@@ -40,16 +46,15 @@ namespace ProyectoAPI.Controllers
             return Ok("Medicamento agregado");
         }
 
-        [Authorize(Roles = "Doctor")]
-        public IActionResult Create()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        [Authorize(Roles = "Doctor")]
         public async Task<IActionResult> Create(Medicamento med)
         {
+            if (ModelState.IsValid)
+            {
+                // guardar en BD
+                return RedirectToAction("Index");
+            }
+
+            return View(med);
         }
 
 
@@ -57,6 +62,11 @@ namespace ProyectoAPI.Controllers
         public IActionResult Edit(int id)
         {
             return View();
+        }
+
+        private IActionResult View()
+        {
+            throw new NotImplementedException();
         }
 
         [HttpDelete("{id}")]
@@ -71,10 +81,19 @@ namespace ProyectoAPI.Controllers
             return Ok("Eliminado");
         }
 
-        [Authorize(Roles = "Doctor")]
-        public IActionResult Delete(int id)
+        [HttpPost]
+        [ActionName("Delete")]
+        public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            return View();
+            var med = await _context.Medicamentos.FindAsync(id);
+
+            if (med != null)
+            {
+                _context.Medicamentos.Remove(med);
+                await _context.SaveChangesAsync();
+            }
+
+            return RedirectToAction("Index");
         }
     }
 }
